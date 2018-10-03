@@ -137,6 +137,10 @@ void SBL_goToHead(Sbl *l) {
     (*l).curr = (*(*l).head).next;
 }
 
+void SBL_goToLast(Sbl *l) {
+    (*l).curr = (*(*l).last).prev;
+}
+
 void SBL_destroy(Sbl *l) {
 
     Node *aux;
@@ -152,5 +156,7 @@ void SBL_destroy(Sbl *l) {
     free((*l).size);
     (*l).size = NULL;
 }
+
+
 
 
