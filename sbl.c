@@ -141,6 +141,14 @@ void SBL_goToLast(Sbl *l) {
     (*l).curr = (*(*l).last).prev;
 }
 
+void SBL_goToNext(Sbl *l) {
+    if ((*(*l).curr).next == NULL) {
+        printf ("Error goToNext: You're currently at the LAST node\n");
+    } else {
+        (*l).curr = (*(*l).curr).next;
+    }
+}
+
 void SBL_destroy(Sbl *l) {
 
     Node *aux;
@@ -156,7 +164,3 @@ void SBL_destroy(Sbl *l) {
     free((*l).size);
     (*l).size = NULL;
 }
-
-
-
-
