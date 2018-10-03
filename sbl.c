@@ -95,6 +95,26 @@ void SBL_insertBefore(Sbl *l, Element e) {
     }
 }
 
+void SBL_insertAfter(Sbl *l, Element e) {
+
+    Node *aux;
+    if ((*l).curr == (*l).last) {
+        printf("Insert Error: Unable to insert after LAST node\n");
+    } else {
+        aux = (Node*)malloc(sizeof(Node));
+        if (aux == NULL) {
+            printf("Insert Error: Malloc Failed\n");
+        } else {
+            (*aux).e = e;
+            (*aux).next = (*(*l).curr).prev;
+            (*aux).prev = (*l).curr;
+            (*(*(*l).curr).next).prev = aux;
+            (*(*l).curr).next = aux;
+            (*(*l).size)++;
+        }
+    }
+}
+
 void SBL_destroy(Sbl *l) {
 
     Node *aux;
@@ -110,3 +130,5 @@ void SBL_destroy(Sbl *l) {
     free((*l).size);
     (*l).size = NULL;
 }
+
+
