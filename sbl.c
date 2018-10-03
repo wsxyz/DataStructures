@@ -169,6 +169,10 @@ int SBL_isEmpty(Sbl l) {
     return (*l.head).next == l.last;
 }
 
+long SBL_getSize(Sbl l) {
+    return *(l.size);
+}
+
 void SBL_destroy(Sbl *l) {
 
     Node *aux;
