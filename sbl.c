@@ -115,6 +115,24 @@ void SBL_insertAfter(Sbl *l, Element e) {
     }
 }
 
+void SBL_insertOrdered(Sbl *l, Element e) {
+
+    int found = 0;
+    Node *aux = (*l).curr;
+
+    (*l).curr = (*(*l).head).next;
+    while (!found && (*(*l).curr).next != NULL)  {
+        if ( (*(*l).curr).e.num < e.num) {
+            (*l).curr = (*(*l).curr).next;
+        } else{
+            found = 1;
+        }
+    }
+
+    SBL_insertBefore(l, e);
+    (*l).curr = aux;
+}
+
 void SBL_destroy(Sbl *l) {
 
     Node *aux;
@@ -130,5 +148,3 @@ void SBL_destroy(Sbl *l) {
     free((*l).size);
     (*l).size = NULL;
 }
-
-
