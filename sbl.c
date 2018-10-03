@@ -35,3 +35,19 @@ Sbl SBL_create() {
     }
     return l;
 }
+
+void SBL_destroy(Sbl *l) {
+
+    Node *aux;
+
+    while ((*l).head != NULL) {
+        aux = (*l).head;
+        (*l).head = (*(*l).head).next;
+        free(aux);
+    }
+
+    (*l).curr = NULL;
+    (*l).last = NULL;
+    free((*l).size);
+    (*l).size = NULL;
+}
