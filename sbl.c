@@ -36,6 +36,24 @@ Sbl SBL_create() {
     return l;
 }
 
+Element SBL_consult(Sbl l) {
+
+    Element e;
+    e.num = -1;
+
+    if (l.curr != l.head && l.curr != l.last) {
+        e = (*l.curr).e;
+    } else {
+        printf("Consult Error: ");
+        if (l.curr == l.head) {
+            printf("Unable to consult HEAD node\n");
+        } else {
+            printf("Unable to consult LAST node\n");
+        }
+    }
+    return e;
+}
+
 void SBL_destroy(Sbl *l) {
 
     Node *aux;
