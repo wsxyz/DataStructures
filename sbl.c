@@ -133,6 +133,10 @@ void SBL_insertOrdered(Sbl *l, Element e) {
     (*l).curr = aux;
 }
 
+void SBL_goToHead(Sbl *l) {
+    (*l).curr = (*(*l).head).next;
+}
+
 void SBL_destroy(Sbl *l) {
 
     Node *aux;
@@ -148,3 +152,5 @@ void SBL_destroy(Sbl *l) {
     free((*l).size);
     (*l).size = NULL;
 }
+
+
