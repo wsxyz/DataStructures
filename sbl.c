@@ -149,6 +149,14 @@ void SBL_goToNext(Sbl *l) {
     }
 }
 
+void SBL_goToPrev(Sbl *l) {
+    if ((*(*l).curr).prev == NULL) {
+        printf ("Error goToPrev: You're currently at the HEAD node\n");
+    } else {
+        (*l).curr = (*(*l).curr).prev;
+    }
+}
+
 void SBL_destroy(Sbl *l) {
 
     Node *aux;
