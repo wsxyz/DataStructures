@@ -75,6 +75,26 @@ void SBL_delete(Sbl *l) {
     }
 }
 
+void SBL_insertBefore(Sbl *l, Element e) {
+
+    Node *aux;
+    if ((*l).curr == (*l).head) {
+        printf("Insert Error: Unable to insert before HEAD node\n");
+    } else {
+        aux = (Node*)malloc(sizeof(Node));
+        if (aux == NULL) {
+            printf("Insert Error: Malloc Failed\n");
+        } else {
+            (*aux).e = e;
+            (*aux).next = (*l).curr;
+            (*aux).prev = (*(*l).curr).prev;
+            (*(*(*l).curr).prev).next = aux;
+            (*(*l).curr).prev = aux;
+            (*(*l).size)++;
+        }
+    }
+}
+
 void SBL_destroy(Sbl *l) {
 
     Node *aux;
