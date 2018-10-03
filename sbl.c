@@ -157,6 +157,10 @@ void SBL_goToPrev(Sbl *l) {
     }
 }
 
+int SBL_isLast(Sbl l) {
+    return (*l.curr).next == NULL;
+}
+
 void SBL_destroy(Sbl *l) {
 
     Node *aux;
