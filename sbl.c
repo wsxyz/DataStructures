@@ -166,7 +166,7 @@ int SBL_isHead(Sbl l) {
 }
 
 int SBL_isEmpty(Sbl l) {
-    return 0;
+    return (*l.head).next == l.last;
 }
 
 void SBL_destroy(Sbl *l) {
