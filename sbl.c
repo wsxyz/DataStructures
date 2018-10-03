@@ -165,6 +165,10 @@ int SBL_isHead(Sbl l) {
     return (*l.curr).prev == NULL;
 }
 
+int SBL_isEmpty(Sbl l) {
+    return 0;
+}
+
 void SBL_destroy(Sbl *l) {
 
     Node *aux;
