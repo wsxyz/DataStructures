@@ -161,6 +161,10 @@ int SBL_isLast(Sbl l) {
     return (*l.curr).next == NULL;
 }
 
+int SBL_isHead(Sbl l) {
+    return (*l.curr).prev == NULL;
+}
+
 void SBL_destroy(Sbl *l) {
 
     Node *aux;
