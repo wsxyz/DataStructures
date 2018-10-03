@@ -54,6 +54,27 @@ Element SBL_consult(Sbl l) {
     return e;
 }
 
+void SBL_delete(Sbl *l) {
+
+    Node *aux;
+
+    if ((*l).curr == (*l).head || (*l).curr == (*l).last) {
+        printf ("Delete Error: ");
+        if ((*l).curr == (*l).head) {
+            printf("Unable to delete HEAD node\n");
+        } else {
+            printf("Unable to delete LAST node\n");
+        }
+    } else {
+        aux = (*l).curr;
+        (*(*(*l).curr).prev).next = (*aux).next;
+        (*(*(*l).curr).next).prev = (*aux).prev;
+        (*l).curr = (*(*l).curr).next;
+        free(aux);
+        (*(*l).size)--;
+    }
+}
+
 void SBL_destroy(Sbl *l) {
 
     Node *aux;
