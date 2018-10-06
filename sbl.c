@@ -101,6 +101,19 @@ void SBL_delete(Sbl *l) {
     }
 }
 
+/**
+ * @Name: SBL_insertBefore
+ * @Def: This function inserts an element before the node where the "curr" pointer is pointing
+ *       and increments the size variable. Memory allocation for a new node is done here.
+ *       It's not permitted to insert before the Head node, an error will be prompt.
+ *       This function was previously designed for a non-sorted bidirectional list and is used
+ *       by the SBL_insertOrdered function.
+ *       Should be used carefully, the order of the list will be altered if used.
+ * @Args: IN/OUT: *l = pointer to a sorted bidirectional list
+ *        IN: e = element to be inserted in the list.
+ * @Ret: ----.
+ *
+ **/
 void SBL_insertBefore(Sbl *l, Element e) {
 
     Node *aux;
