@@ -44,6 +44,15 @@ Sbl SBL_create() {
     return l;
 }
 
+/**
+ * @Name: SBL_consult
+ * @Def: This function returns the element where the "curr" pointer of the list is pointing.
+ *       If the "curr" pointer is pointing to the head node or to the last node, an undefined element
+ *       will be returned.
+ * @Args: ----.
+ * @Ret: Returns an element of the list.
+ *
+ **/
 Element SBL_consult(Sbl l) {
 
     Element e;
