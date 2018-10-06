@@ -1,6 +1,15 @@
 #include <time.h>
 #include "sbl.h"
 
+/**
+ * @Name: testInsertion
+ * @Def: A test function designed to verify the correct insertion functioning of the
+ *       Sorted Bidirectional List. This method simply checks if the elements in the list
+ *       are in order after the insertions.
+ * @Args: ----.
+ * @Ret: Returns 0 if this test reaches successfully the return statement.
+ *
+ **/
 int testInsertion() {
 
     Sbl list = SBL_create();
@@ -41,7 +50,6 @@ int testInsertion() {
 
     return 0;
 }
-
 
 int main() {
     printf("Data Structures in C!\n");
