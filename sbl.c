@@ -134,6 +134,18 @@ void SBL_insertBefore(Sbl *l, Element e) {
     }
 }
 
+/**
+ * @Name: SBL_insertAfter
+ * @Def: This function inserts an element after the node where the "curr" pointer is pointing
+ *       and increments the size variable. Memory allocation for a new node is done here.
+ *       It's not permitted to insert afterr the Last node, an error will be prompt.
+ *       This function was previously designed for a non-sorted bidirectional list.
+ *       Should be used carefully, the order of the list will be altered if used.
+ * @Args: IN/OUT: *l = pointer to a sorted bidirectional list
+ *        IN: e = element to be inserted in the list.
+ * @Ret: ----.
+ *
+ **/
 void SBL_insertAfter(Sbl *l, Element e) {
 
     Node *aux;
