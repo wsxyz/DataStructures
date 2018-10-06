@@ -276,6 +276,14 @@ int SBL_isHead(Sbl l) {
     return (*l.curr).prev == NULL;
 }
 
+/**
+ * @Name: SBL_isEmpty
+ * @Def: This function checks if the list is empty.
+ * @Args: IN/OUT: l = sorted bidirectional list.
+ * @Ret: Retuns 1 if the "curr.next" pointer is pointing to the same node where the last pointer
+ *       of the list is pointing.
+ *
+ **/
 int SBL_isEmpty(Sbl l) {
     return (*l.head).next == l.last;
 }
