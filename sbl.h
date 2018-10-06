@@ -1,7 +1,11 @@
-//
-// Sorted Bidirectional List
-// Created by Olekssiy Byelyayev on 02/10/2018.
-//
+/**
+ *
+ * @File: sbl.h
+ * @Def: Defines and declares the functions and variables used by the Sorted Bidirectional List.
+ * @Author: Oleksiy Byelyayev
+ * @Date: 02/10/2018
+ *
+ **/
 
 #ifndef _SBL_H
 #define _SBL_H
