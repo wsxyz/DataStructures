@@ -5,6 +5,14 @@
 
 #include "sbl.h"
 
+/**
+ * @Name: SBL_create
+ * @Def: This function creates a Sorted Bidirectional List by allocating dynamic memory.
+ *       If an error occurs during memory allocation the memory is freed.
+ * @Args: ----.
+ * @Ret: Returns a created Sorted Bidirectional List.
+ *
+ **/
 Sbl SBL_create() {
 
     Sbl l;
