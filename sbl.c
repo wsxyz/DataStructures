@@ -238,6 +238,14 @@ void SBL_goToNext(Sbl *l) {
     }
 }
 
+/**
+ * @Name: SBL_goToPrev
+ * @Def: This function moves the "curr" pointer to the next node where the "curr.prev" is pointing.
+ *       If the "curr" pointer is already in the Head Node of the list an error will be prompt.
+ * @Args: IN/OUT: *l = pointer to a sorted bidirectional list.
+ * @Ret: ----.
+ *
+ **/
 void SBL_goToPrev(Sbl *l) {
     if ((*(*l).curr).prev == NULL) {
         printf ("Error goToPrev: You're currently at the HEAD node\n");
