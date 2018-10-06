@@ -15,10 +15,11 @@ int testInsertion() {
     Sbl list = SBL_create();
     Element e;
     int i = 0;
-    int n = INT_MAX/10000000;
+    int n = INT_MAX/100000000;
     time_t t;
     srand((unsigned)time(&t));
 
+    printf("\n---- Consult Test ----\n");
     printf("Number of Elements to Insert: %d\n", n);
 
     for (i = 0; i < n; i++) {
@@ -26,7 +27,6 @@ int testInsertion() {
         SBL_insertOrdered(&list, e);
     }
 
-    printf("\nList Size: %ld\n", SBL_getSize(list));
     printf("ASC Order:\n");
     SBL_goToHead(&list);
     while (!SBL_isLast(list)) {
@@ -35,10 +35,7 @@ int testInsertion() {
         SBL_goToNext(&list);
     }
 
-    printf("\n*********************************\n");
-
-    printf("\nList Size: %ld\n", SBL_getSize(list));
-    printf("DESC Order:\n");
+    printf("\nDESC Order:\n");
     SBL_goToLast(&list);
     while (!SBL_isHead(list)) {
         e = SBL_consult(list);
