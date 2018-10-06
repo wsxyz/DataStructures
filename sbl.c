@@ -209,6 +209,15 @@ void SBL_goToHead(Sbl *l) {
     (*l).curr = (*(*l).head).next;
 }
 
+/**
+ * @Name: SBL_goToLast
+ * @Def: This function moves the "curr" pointer to the last node of the list.
+ *       Like the SBL_goToHead function, this one moves the "curr" pointer to the
+ *       last node of the list containing an element if a previous insertion has been done.
+ * @Args: IN/OUT: *l = pointer to a sorted bidirectional list.
+ * @Ret: ----.
+ *
+ **/
 void SBL_goToLast(Sbl *l) {
     (*l).curr = (*(*l).last).prev;
 }
