@@ -95,7 +95,7 @@ void SBL_delete(Sbl *l) {
         aux = (*l).curr;
         (*(*(*l).curr).prev).next = (*aux).next;
         (*(*(*l).curr).next).prev = (*aux).prev;
-        (*l).curr = (*(*l).curr).next;
+        (*l).curr = (*(*l).curr).prev;
         free(aux);
         (*(*l).size)--;
     }
