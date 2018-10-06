@@ -131,6 +131,13 @@ int testDelete() {
         SBL_goToNext(&list);
     }
 
+    if (SBL_getSize(list) != 0) {
+        printf("\nDELETE TEST FAILED\n");
+    } else {
+        printf("\nDELETE TEST SUCCESSFUL\n");
+
+    }
+
     printf("\nAfter Deletion: \n");
 
     SBL_goToHead(&list);
