@@ -71,6 +71,15 @@ Element SBL_consult(Sbl l) {
     return e;
 }
 
+/**
+ * @Name: SBL_delete
+ * @Def: This function deletes the element where the "curr" pointer of the list is pointing.
+ *       If the "curr" pointer is pointing to the head node or to the last node, an error message
+ *       will be prompt. The memory of the deleted node will be freed and the size variable will be decreased.
+ * @Args: Pointer to a sorted bidirectional list.
+ * @Ret: ----.
+ *
+ **/
 void SBL_delete(Sbl *l) {
 
     Node *aux;
