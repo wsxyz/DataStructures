@@ -288,6 +288,13 @@ int SBL_isEmpty(Sbl l) {
     return (*l.head).next == l.last;
 }
 
+/**
+ * @Name: SBL_getSize
+ * @Def: This function returns the number of elements that the list contains.
+ * @Args: IN: l = sorted bidirectional list.
+ * @Ret: Returns the number of elements contained in the list.
+ *
+ **/
 long SBL_getSize(Sbl l) {
     return *(l.size);
 }
