@@ -49,7 +49,7 @@ Sbl SBL_create() {
  * @Def: This function returns the element where the "curr" pointer of the list is pointing.
  *       If the "curr" pointer is pointing to the head node or to the last node, an undefined element
  *       will be returned.
- * @Args: ----.
+ * @Args: Receives a sorted bidirectional list.
  * @Ret: Returns an element of the list.
  *
  **/
