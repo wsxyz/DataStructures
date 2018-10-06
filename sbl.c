@@ -265,6 +265,13 @@ int SBL_isLast(Sbl l) {
     return (*l.curr).next == NULL;
 }
 
+/**
+ * @Name: SBL_isHead
+ * @Def: This function checks if the "curr" pointer is pointing to the Head node of the list.
+ * @Args: IN/OUT: l = sorted bidirectional list.
+ * @Ret: Retuns 1 if the "curr" pointer is pointing to the head node.
+ *
+ **/
 int SBL_isHead(Sbl l) {
     return (*l.curr).prev == NULL;
 }
