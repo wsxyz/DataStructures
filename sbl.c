@@ -196,6 +196,15 @@ void SBL_insertOrdered(Sbl *l, Element e) {
     (*l).curr = aux;
 }
 
+/**
+ * @Name: SBL_goToHead
+ * @Def: This function moves the "curr" pointer to the first node of the list.
+ *       Don't confuse the first node with the head node, the first node it's the
+ *       node where the head node "next" pointer is pointing.
+ * @Args: IN/OUT: *l = pointer to a sorted bidirectional list.
+ * @Ret: ----.
+ *
+ **/
 void SBL_goToHead(Sbl *l) {
     (*l).curr = (*(*l).head).next;
 }
