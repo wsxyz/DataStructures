@@ -254,6 +254,13 @@ void SBL_goToPrev(Sbl *l) {
     }
 }
 
+/**
+ * @Name: SBL_isLast
+ * @Def: This function checks if the "curr" pointer is pointing to the Last node of the list.
+ * @Args: IN/OUT: l = sorted bidirectional list.
+ * @Ret: Retuns 1 if the "curr" pointer is pointing to the last node.
+ *
+ **/
 int SBL_isLast(Sbl l) {
     return (*l.curr).next == NULL;
 }
