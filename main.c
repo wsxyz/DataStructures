@@ -1,3 +1,13 @@
+/**
+ *
+ * @File: main.c
+ * @Def: Main entry point to the program to try and verify the designed data structures.
+ *       Sorted Bidirectional List 1.0.0
+ * @Author: Oleksiy Byelyayev
+ * @Date: 06/10/2018
+ *
+ **/
+ 
 #include <time.h>
 #include "sbl.h"
 
