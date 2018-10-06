@@ -15,7 +15,7 @@ int testInsertion() {
     Sbl list = SBL_create();
     Element e;
     int i = 0;
-    int n = INT_MAX/100000;
+    int n = INT_MAX/10000000;
     time_t t;
     srand((unsigned)time(&t));
 
@@ -95,9 +95,61 @@ int testConsult() {
     return 0;
 }
 
+
+/**
+ * @Name: testDelete
+ * @Def: A test function designed to verify if the delete function is working as expected.
+ * @Args: ----.
+ * @Ret: Returns 0 if this test reaches successfully the return statement.
+ *
+ **/
+int testDelete() {
+
+    Sbl list = SBL_create();
+    Element e;
+    int i = 0;
+    int n = 10;
+    time_t t;
+    srand((unsigned)time(&t));
+
+    printf("\n---- Delete Test ----\n");
+    printf("Number of Elements to Insert: %d\n", n);
+
+    for (i = 0; i < n; i++) {
+        e.num = rand() % n;
+        SBL_insertOrdered(&list, e);
+    }
+
+    printf("Before Deletion: \n");
+    SBL_goToHead(&list);
+    while (!SBL_isLast(list)) {
+        e = SBL_consult(list);
+        printf("\tElement: %d\n", e.num);
+        SBL_goToNext(&list);
+    }
+
+    SBL_goToHead(&list);
+    while (!SBL_isLast(list)) {
+        SBL_delete(&list);
+        SBL_goToNext(&list);
+    }
+
+    printf("\nAfter Deletion: \n");
+
+    SBL_goToHead(&list);
+    while (!SBL_isLast(list)) {
+        e = SBL_consult(list);
+        printf("\tElement: %d\n", e.num);
+        SBL_goToNext(&list);
+    }
+
+    return 0;
+}
+
 int main() {
     printf("Data Structures in C!\n");
     testInsertion();
     testConsult();
+    testDelete();
     return 0;
 }
