@@ -133,19 +133,18 @@ int testDelete() {
 
     if (SBL_getSize(list) != 0) {
         printf("\nDELETE TEST FAILED\n");
+        printf("\nAfter Deletion: \n");
+        SBL_goToHead(&list);
+        while (!SBL_isLast(list)) {
+            e = SBL_consult(list);
+            printf("\tElement: %d\n", e.num);
+            SBL_goToNext(&list);
+        }
     } else {
         printf("\nDELETE TEST SUCCESSFUL\n");
-
     }
 
-    printf("\nAfter Deletion: \n");
-
-    SBL_goToHead(&list);
-    while (!SBL_isLast(list)) {
-        e = SBL_consult(list);
-        printf("\tElement: %d\n", e.num);
-        SBL_goToNext(&list);
-    }
+    SBL_destroy(&list);
 
     return 0;
 }
