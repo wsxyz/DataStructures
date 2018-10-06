@@ -222,6 +222,14 @@ void SBL_goToLast(Sbl *l) {
     (*l).curr = (*(*l).last).prev;
 }
 
+/**
+ * @Name: SBL_goToNext
+ * @Def: This function moves the "curr" pointer to the next node where the "curr.next"  is pointing.
+ *       If the "curr" pointer is already in the last Node of the list an error will be prompt.
+ * @Args: IN/OUT: *l = pointer to a sorted bidirectional list.
+ * @Ret: ----.
+ *
+ **/
 void SBL_goToNext(Sbl *l) {
     if ((*(*l).curr).next == NULL) {
         printf ("Error goToNext: You're currently at the LAST node\n");
