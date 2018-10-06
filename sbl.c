@@ -299,6 +299,13 @@ long SBL_getSize(Sbl l) {
     return *(l.size);
 }
 
+/**
+ * @Name: SBL_destroy
+ * @Def: This function frees all the dynamic memory used by the sorted bidirectional list.
+ * @Args: IN/OUT: l = pointer to a sorted bidirectional list.
+ * @Ret: ----.
+ *
+ **/
 void SBL_destroy(Sbl *l) {
 
     Node *aux;
