@@ -154,5 +154,6 @@ int main() {
     testInsertion();
     testConsult();
     testDelete();
+    printf("\nAll Tests Passed Successfully\n");
     return 0;
 }
