@@ -166,6 +166,18 @@ void SBL_insertAfter(Sbl *l, Element e) {
     }
 }
 
+/**
+ * @Name: SBL_insertOrdered
+ * @Def: This function inserts an element in order and increments the size variable.
+         The position of insertion is found by comparing the new element variable to be inserted
+         with the elements that are already in the list.
+         This process is done by moving the "curr" pointer to the first available element,
+         and going forward in the list while the desired sorting condition is not achieved.
+ * @Args: IN/OUT: *l = pointer to a sorted bidirectional list
+ *        IN: e = element to be inserted in the list.
+ * @Ret: ----.
+ *
+ **/
 void SBL_insertOrdered(Sbl *l, Element e) {
 
     int found = 0;
