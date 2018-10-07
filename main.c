@@ -25,7 +25,7 @@ int testInsertion() {
     Sbl list = SBL_create();
     Element e;
     int i = 0;
-    int n = INT_MAX/100000000;
+    int n = 10;
     time_t t;
     srand((unsigned)time(&t));
 
