@@ -95,7 +95,7 @@ int testConsult() {
 
     SBL_goToLast(&list);
     e = SBL_consult(list);
-    printf("First Element of the List: %d\n", e.num);
+    printf("Last Element of the List: %d\n", e.num);
 
     SBL_destroy(&list);
 
