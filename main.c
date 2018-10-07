@@ -29,7 +29,7 @@ int testInsertion() {
     time_t t;
     srand((unsigned)time(&t));
 
-    printf("\n---- Consult Test ----\n");
+    printf("\n---- Insert Test ----\n");
     printf("Number of Elements to Insert: %d\n", n);
 
     for (i = 0; i < n; i++) {
